@@ -84,7 +84,7 @@ function initLogin() {
         toggle.addEventListener('click', function () {
             var show = passInput.type === 'password';
             passInput.type = show ? 'text' : 'password';
-            toggle.textContent = show ? '🙈' : '👁️';
+            toggle.innerHTML = iconSvg(show ? 'eye-slash' : 'eye');
             toggle.setAttribute('aria-label', show ? 'Ocultar senha' : 'Mostrar senha');
         });
     }
@@ -153,7 +153,7 @@ function buildCaravanaCard(c) {
     var arrow = document.createElement('span');
     arrow.className = 'caravana-card-arrow';
     arrow.setAttribute('aria-hidden', 'true');
-    arrow.textContent = '›';
+    arrow.innerHTML = iconSvg('caret-right');
 
     article.appendChild(body);
     article.appendChild(arrow);
@@ -431,12 +431,12 @@ function renderParticipantes() {
         actions.className = 'row-actions';
         var editBtn = document.createElement('button');
         editBtn.className = 'btn btn--icon';
-        editBtn.textContent = '✏️';
+        editBtn.innerHTML = iconSvg('pencil-simple');
         editBtn.setAttribute('aria-label', 'Editar ' + p.nome);
         editBtn.addEventListener('click', function () { navigateTo('participante-form.html', { id: p.id }); });
         var delBtn = document.createElement('button');
         delBtn.className = 'btn btn--icon btn--icon-danger';
-        delBtn.textContent = '🗑️';
+        delBtn.innerHTML = iconSvg('trash');
         delBtn.setAttribute('aria-label', 'Excluir ' + p.nome);
         delBtn.addEventListener('click', function () {
             confirmDialog({
@@ -602,7 +602,7 @@ function initAssociar() {
             info.appendChild(name); info.appendChild(cpf);
             var rm = document.createElement('button');
             rm.className = 'btn btn--icon btn--icon-danger';
-            rm.textContent = '✕';
+            rm.innerHTML = iconSvg('x');
             rm.setAttribute('aria-label', 'Remover ' + p.nome);
             rm.addEventListener('click', function () {
                 staging = staging.filter(function (x) { return x.participanteId !== p.id; });

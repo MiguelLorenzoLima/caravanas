@@ -86,6 +86,7 @@ Breakpoints: `768px` e `480px` — reduzem `--content-padding` e `--space-*` (ve
 | `.search-field/.search-icon` | Busca com ícone | — |
 | `.nav/.nav-list/.nav-item/.is-active` | Pílula bronze; base de `tabs` e `filtros` | `.tabs/.tab-btn/.filter-row/.filter-btn/.active` = aliases |
 | `.avatar` | Iniciais sobre `--color-accent-light` | — |
+| `.icon` (+ sprite `assets/icons.svg`) | Ícones Phosphor `light` via `<svg><use>`; cor herdada `currentColor`, tamanho em `em` | — |
 | `.status-badge/.status-paid/.status-pending` | Pagamento (único lugar de verde/vermelho além de toast/erro) | — |
 | `.modal-overlay/.modal/.modal-actions` | Confirmação; overlay `var(--color-overlay)` | — |
 | `.toast-container/.toast` | Feedback; tipos via `--color-success/danger/accent` | — |

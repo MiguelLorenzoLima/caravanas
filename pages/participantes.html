@@ -13,9 +13,9 @@
 <body data-page="participantes">
     <header class="page-header">
         <div class="page-header-inner">
-            <button class="btn btn--icon" id="menuBtn" aria-label="Voltar ao início">☰</button>
+            <button class="btn btn--icon" id="menuBtn" aria-label="Voltar ao início"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-list"/></svg></button>
             <h1 class="page-title">Participantes</h1>
-            <button class="btn btn--icon" id="addParticipante" aria-label="Adicionar participante">+</button>
+            <button class="btn btn--icon" id="addParticipante" aria-label="Adicionar participante"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-plus"/></svg></button>
         </div>
     </header>
     <main id="app" class="page">
@@ -24,7 +24,7 @@
             <select class="select" id="caravanaFilter"></select>
         </div>
         <div class="search-field">
-            <span class="search-icon" aria-hidden="true">🔍</span>
+            <span class="search-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-magnifying-glass"/></svg></span>
             <label class="sr-only" for="searchParticipantes">Pesquisar por nome ou CPF</label>
             <input class="field" id="searchParticipantes" type="search" placeholder="Pesquisar por nome ou CPF" autocomplete="off">
         </div>
@@ -38,10 +38,10 @@
     </main>
     <nav class="bottom-nav" aria-label="Navegação principal">
         <div class="bottom-nav-inner">
-            <button class="bottom-nav-item" data-nav="dashboard.html"><span class="bottom-nav-icon" aria-hidden="true">🏠</span><span>Início</span></button>
-            <button class="bottom-nav-item" data-nav="caravanas.html"><span class="bottom-nav-icon" aria-hidden="true">🚌</span><span>Caravanas</span></button>
-            <button class="bottom-nav-item is-active" data-nav="participantes.html" aria-current="page"><span class="bottom-nav-icon" aria-hidden="true">👥</span><span>Participantes</span></button>
-            <button class="bottom-nav-item" data-nav="pesquisar-participante.html"><span class="bottom-nav-icon" aria-hidden="true">⋯</span><span>Mais</span></button>
+            <button class="bottom-nav-item" data-nav="dashboard.html"><span class="bottom-nav-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-house"/></svg></span><span>Início</span></button>
+            <button class="bottom-nav-item" data-nav="caravanas.html"><span class="bottom-nav-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-bus"/></svg></span><span>Caravanas</span></button>
+            <button class="bottom-nav-item is-active" data-nav="participantes.html" aria-current="page"><span class="bottom-nav-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-users"/></svg></span><span>Participantes</span></button>
+            <button class="bottom-nav-item" data-nav="pesquisar-participante.html"><span class="bottom-nav-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-dots-three"/></svg></span><span>Mais</span></button>
         </div>
     </nav>
     <div class="modal-overlay" id="confirmOverlay" hidden>

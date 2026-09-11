@@ -134,3 +134,9 @@ function applyPhoneMask(input) {
         input.value = formatPhone(input.value);
     });
 }
+
+// Ícones Phosphor light via sprite local (assets/icons.svg).
+// Retorna o markup <svg><use> do símbolo pedido; a cor vem de currentColor (CSS).
+function iconSvg(name) {
+    return '<svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-' + name + '"></use></svg>';
+}

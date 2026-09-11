@@ -13,21 +13,21 @@
 <body data-page="caravana-detalhes">
     <header class="page-header">
         <div class="page-header-inner">
-            <button class="btn btn--icon" id="backBtn" aria-label="Voltar">←</button>
+            <button class="btn btn--icon" id="backBtn" aria-label="Voltar"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-arrow-left"/></svg></button>
             <h1 class="page-title">Caravana</h1>
-            <button class="btn btn--icon" id="menuBtn" aria-label="Ações da caravana">⋯</button>
+            <button class="btn btn--icon" id="menuBtn" aria-label="Ações da caravana"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-dots-three"/></svg></button>
         </div>
     </header>
     <main id="app" class="page">
         <section class="card" aria-label="Resumo da caravana">
             <div class="detail-head">
-                <span class="avatar avatar-lg" aria-hidden="true">🚌</span>
+                <span class="avatar avatar-lg" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-bus"/></svg></span>
                 <div class="detail-head-body">
                     <h2 id="detailRoute">—</h2>
                     <p class="page-subtitle" id="detailMeta">—</p>
                     <p class="page-subtitle" id="detailResp">—</p>
                 </div>
-                <button class="btn btn--icon" id="editCaravana" aria-label="Editar caravana">✏️</button>
+                <button class="btn btn--icon" id="editCaravana" aria-label="Editar caravana"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-pencil-simple"/></svg></button>
             </div>
         </section>
 
@@ -39,7 +39,7 @@
         <section id="panelParticipantes">
             <h3 id="partCount">Participantes (0)</h3>
             <div class="search-field stack-gap">
-                <span class="search-icon" aria-hidden="true">🔍</span>
+                <span class="search-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-magnifying-glass"/></svg></span>
                 <label class="sr-only" for="searchDetalhe">Pesquisar nesta caravana</label>
                 <input class="field" id="searchDetalhe" type="search" placeholder="Pesquisar nesta caravana" autocomplete="off">
             </div>
@@ -62,10 +62,10 @@
     </main>
     <nav class="bottom-nav" aria-label="Navegação principal">
         <div class="bottom-nav-inner">
-            <button class="bottom-nav-item" data-nav="dashboard.html"><span class="bottom-nav-icon" aria-hidden="true">🏠</span><span>Início</span></button>
-            <button class="bottom-nav-item is-active" data-nav="caravanas.html"><span class="bottom-nav-icon" aria-hidden="true">🚌</span><span>Caravanas</span></button>
-            <button class="bottom-nav-item" data-nav="participantes.html"><span class="bottom-nav-icon" aria-hidden="true">👥</span><span>Participantes</span></button>
-            <button class="bottom-nav-item" data-nav="pesquisar-participante.html"><span class="bottom-nav-icon" aria-hidden="true">⋯</span><span>Mais</span></button>
+            <button class="bottom-nav-item" data-nav="dashboard.html"><span class="bottom-nav-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-house"/></svg></span><span>Início</span></button>
+            <button class="bottom-nav-item is-active" data-nav="caravanas.html"><span class="bottom-nav-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-bus"/></svg></span><span>Caravanas</span></button>
+            <button class="bottom-nav-item" data-nav="participantes.html"><span class="bottom-nav-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-users"/></svg></span><span>Participantes</span></button>
+            <button class="bottom-nav-item" data-nav="pesquisar-participante.html"><span class="bottom-nav-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#ph-dots-three"/></svg></span><span>Mais</span></button>
         </div>
     </nav>
     <div class="modal-overlay" id="confirmOverlay" hidden>
