@@ -1,21 +1,93 @@
+/* ---------- Telas médias ---------- */
+@media (max-width: 768px) {
+    .page {
+        padding: 45px 18px;
+        padding-bottom: calc(var(--bottom-nav-height) + var(--space-md));
+    }
+
+    .page-hero,
+    .hero-card {
+        padding: 55px 20px 40px;
+    }
+
+    .grid-2,
+    .shortcut-grid,
+    .summary-row {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .summary-row {
+        gap: var(--space-sm);
+    }
+
+    .caravana-list,
+    .participante-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-box {
+        padding: 30px 28px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-actions {
+        max-width: 480px;
+    }
+
+    .tabs,
+    .filter-row {
+        padding: 8px 12px;
+        overflow-x: auto;
+    }
+}
+
+/* ---------- Telas estreitas ---------- */
+@media (max-width: 480px) {
+    body,
+    p {
+        font-size: 16px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+
+    .modal {
+        padding: var(--space-md);
+    }
+
+    .bottom-nav-icon {
+        font-size: 1.1rem;
+    }
+}
+
+/* ---------- Telas largas (grade do app) ---------- */
 @media (min-width: 768px) {
     .shortcut-grid {
         grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-sm);
     }
 
-    .caravana-list, .participante-list {
+    .caravana-list,
+    .participante-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: var(--spacing-md);
+        gap: var(--space-sm);
     }
 
     .caravana-list .caravana-card,
     .participante-list .participante-card {
         margin-bottom: 0;
-    }
-
-    .form-actions {
-        max-width: 480px;
     }
 }
 
@@ -27,14 +99,16 @@
     .participante-list {
         grid-template-columns: 1fr 1fr;
     }
-
-    .bottom-nav-icon {
-        font-size: 1.1rem;
-    }
 }
 
+/* ---------- Impressão (lista de participantes) ---------- */
 @media print {
-    .bottom-nav, .page-header, .no-print, .toast-container, .form-actions, .btn {
+    .bottom-nav,
+    .page-header,
+    .no-print,
+    .toast-container,
+    .form-actions,
+    .btn {
         display: none !important;
     }
 
@@ -42,7 +116,8 @@
         background: #fff;
     }
 
-    main.page, .container {
+    main.page,
+    .container {
         padding: 0;
         max-width: 100%;
     }
@@ -53,6 +128,7 @@
     }
 }
 
+/* ---------- Movimento reduzido ---------- */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -61,5 +137,10 @@
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
     }
 }

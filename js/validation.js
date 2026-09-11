@@ -28,8 +28,8 @@ function validateDateBR(value) {
 function setFieldError(input, errorEl, message) {
     if (errorEl) { errorEl.textContent = message || ''; }
     if (input) {
-        if (message) { input.classList.add('form-input-invalid'); }
-        else { input.classList.remove('form-input-invalid'); }
+        if (message) { input.classList.add('field--invalid'); input.classList.add('form-input-invalid'); }
+        else { input.classList.remove('field--invalid'); input.classList.remove('form-input-invalid'); }
     }
     return !message;
 }

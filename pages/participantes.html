@@ -13,25 +13,25 @@
 <body data-page="participantes">
     <header class="page-header">
         <div class="page-header-inner">
-            <button class="icon-button" id="menuBtn" aria-label="Voltar ao início">☰</button>
+            <button class="btn btn--icon" id="menuBtn" aria-label="Voltar ao início">☰</button>
             <h1 class="page-title">Participantes</h1>
-            <button class="icon-button" id="addParticipante" aria-label="Adicionar participante">+</button>
+            <button class="btn btn--icon" id="addParticipante" aria-label="Adicionar participante">+</button>
         </div>
     </header>
     <main id="app" class="page">
-        <div class="form-field">
-            <label class="form-label" for="caravanaFilter">Caravana (para status de pagamento)</label>
-            <select class="form-select" id="caravanaFilter"></select>
+        <div class="form-group">
+            <label class="label" for="caravanaFilter">Caravana (para status de pagamento)</label>
+            <select class="select" id="caravanaFilter"></select>
         </div>
         <div class="search-field">
             <span class="search-icon" aria-hidden="true">🔍</span>
             <label class="sr-only" for="searchParticipantes">Pesquisar por nome ou CPF</label>
-            <input class="form-input" id="searchParticipantes" type="search" placeholder="Pesquisar por nome ou CPF" autocomplete="off">
+            <input class="field" id="searchParticipantes" type="search" placeholder="Pesquisar por nome ou CPF" autocomplete="off">
         </div>
-        <div class="filter-row" role="group" aria-label="Filtro de pagamento">
-            <button class="filter-btn active" data-filter="todos">Todos</button>
-            <button class="filter-btn" data-filter="pagos">Pagos</button>
-            <button class="filter-btn" data-filter="pendentes">Pendentes</button>
+        <div class="nav-list filter-row" role="group" aria-label="Filtro de pagamento">
+            <button class="nav-item filter-btn is-active" data-filter="todos">Todos</button>
+            <button class="nav-item filter-btn" data-filter="pagos">Pagos</button>
+            <button class="nav-item filter-btn" data-filter="pendentes">Pendentes</button>
         </div>
         <p class="info-note">O status de pagamento é referente à caravana selecionada. Clique no status para alternar.</p>
         <div id="participanteList" class="participante-list"></div>
@@ -40,7 +40,7 @@
         <div class="bottom-nav-inner">
             <button class="bottom-nav-item" data-nav="dashboard.html"><span class="bottom-nav-icon" aria-hidden="true">🏠</span><span>Início</span></button>
             <button class="bottom-nav-item" data-nav="caravanas.html"><span class="bottom-nav-icon" aria-hidden="true">🚌</span><span>Caravanas</span></button>
-            <button class="bottom-nav-item active" data-nav="participantes.html" aria-current="page"><span class="bottom-nav-icon" aria-hidden="true">👥</span><span>Participantes</span></button>
+            <button class="bottom-nav-item is-active" data-nav="participantes.html" aria-current="page"><span class="bottom-nav-icon" aria-hidden="true">👥</span><span>Participantes</span></button>
             <button class="bottom-nav-item" data-nav="pesquisar-participante.html"><span class="bottom-nav-icon" aria-hidden="true">⋯</span><span>Mais</span></button>
         </div>
     </nav>
@@ -49,8 +49,8 @@
             <h2 id="confirmTitle">Excluir participante?</h2>
             <p id="confirmDescription">Esta ação não poderá ser desfeita.</p>
             <div class="modal-actions">
-                <button class="btn btn-secondary" id="confirmCancel">Cancelar</button>
-                <button class="btn btn-danger" id="confirmOk">Excluir</button>
+                <button class="btn btn--secondary" id="confirmCancel">Cancelar</button>
+                <button class="btn btn--danger" id="confirmOk">Excluir</button>
             </div>
         </div>
     </div>

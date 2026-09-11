@@ -13,24 +13,24 @@
 <body data-page="lista">
     <header class="page-header no-print">
         <div class="page-header-inner">
-            <button class="icon-button" id="backBtn" aria-label="Voltar">←</button>
+            <button class="btn btn--icon" id="backBtn" aria-label="Voltar">←</button>
             <h1 class="page-title">Lista de Participantes</h1>
-            <span style="width:40px;"></span>
+            <span class="header-spacer"></span>
         </div>
     </header>
     <main id="app" class="page">
         <section class="card" aria-label="Caravana">
-            <div style="display:flex; gap:12px; align-items:center;">
+            <div class="detail-head">
                 <span class="avatar avatar-lg" aria-hidden="true">🚌</span>
-                <div>
+                <div class="detail-head-body">
                     <h2 id="listaRoute">—</h2>
-                    <p class="page-subtitle" id="listaMeta" style="margin:0;">—</p>
-                    <p class="page-subtitle" id="listaResp" style="margin:0;">—</p>
+                    <p class="page-subtitle" id="listaMeta">—</p>
+                    <p class="page-subtitle" id="listaResp">—</p>
                 </div>
             </div>
         </section>
 
-        <div class="summary-row" style="margin-top:16px;">
+        <div class="grid-2 summary-row">
             <div class="card summary-card"><strong id="totalNum">0</strong><span>Total de participantes</span></div>
             <div class="card summary-card"><strong id="pagosNum">0</strong><span>Pagos</span></div>
             <div class="card summary-card"><strong id="pendNum">0</strong><span>Pendentes</span></div>
@@ -39,8 +39,8 @@
         <ol id="listaOl" class="ordered-list"></ol>
 
         <div class="form-actions no-print">
-            <button class="btn btn-secondary" id="shareBtn">Compartilhar</button>
-            <button class="btn btn-primary" id="pdfBtn">Exportar PDF</button>
+            <button class="btn btn--secondary" id="shareBtn">Compartilhar</button>
+            <button class="btn btn--primary" id="pdfBtn">Exportar PDF</button>
         </div>
     </main>
     <nav class="bottom-nav no-print" aria-label="Navegação principal">

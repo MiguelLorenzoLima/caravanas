@@ -14,31 +14,32 @@
     <header class="page-header">
         <div class="page-header-inner">
             <h1 class="page-title">Caravanas CCB</h1>
-            <button class="icon-button" data-logout aria-label="Sair">⏻</button>
+            <button class="btn btn--icon" data-logout aria-label="Sair">⏻</button>
         </div>
     </header>
     <main id="app" class="page">
-        <section class="hero-card">
+        <section class="page-hero">
+            <span class="eyebrow">Caravanas CCB</span>
             <h2 id="greeting">Olá, responsável! O que deseja fazer hoje?</h2>
         </section>
 
-        <section class="shortcut-grid" aria-label="Atalhos">
-            <article class="card card-clickable shortcut-card" data-shortcut="caravanas.html" tabindex="0" role="link" aria-label="Ver caravanas">
+        <section class="grid-2 shortcut-grid" aria-label="Atalhos">
+            <article class="card card--clickable shortcut-card" data-shortcut="caravanas.html" tabindex="0" role="link" aria-label="Ver caravanas">
                 <span class="shortcut-icon" aria-hidden="true">🚌</span>
                 <h3>Caravanas</h3>
                 <p class="page-subtitle">Ver e gerenciar caravanas</p>
             </article>
-            <article class="card card-clickable shortcut-card" data-shortcut="participantes.html" tabindex="0" role="link" aria-label="Gerenciar participantes">
+            <article class="card card--clickable shortcut-card" data-shortcut="participantes.html" tabindex="0" role="link" aria-label="Gerenciar participantes">
                 <span class="shortcut-icon" aria-hidden="true">👥</span>
                 <h3>Participantes</h3>
                 <p class="page-subtitle">Gerenciar participantes</p>
             </article>
-            <article class="card card-clickable shortcut-card" data-shortcut="caravana-form.html" tabindex="0" role="link" aria-label="Cadastrar nova caravana">
+            <article class="card card--clickable shortcut-card" data-shortcut="caravana-form.html" tabindex="0" role="link" aria-label="Cadastrar nova caravana">
                 <span class="shortcut-icon" aria-hidden="true">➕</span>
                 <h3>Nova Caravana</h3>
                 <p class="page-subtitle">Cadastrar uma nova caravana</p>
             </article>
-            <article class="card card-clickable shortcut-card" data-shortcut="pesquisar-participante.html" tabindex="0" role="link" aria-label="Pesquisar participantes">
+            <article class="card card--clickable shortcut-card" data-shortcut="pesquisar-participante.html" tabindex="0" role="link" aria-label="Pesquisar participantes">
                 <span class="shortcut-icon" aria-hidden="true">🔍</span>
                 <h3>Buscar</h3>
                 <p class="page-subtitle">Pesquisar participantes</p>
@@ -46,14 +47,17 @@
         </section>
 
         <section aria-labelledby="proximasTitle">
-            <h2 id="proximasTitle">Próximas caravanas</h2>
-            <div id="proximasCaravanas" class="caravana-list" style="margin-top:12px;"></div>
+            <div class="section-header">
+                <h2 id="proximasTitle">Próximas caravanas</h2>
+                <span></span>
+            </div>
+            <div id="proximasCaravanas" class="caravana-list"></div>
         </section>
     </main>
 
     <nav class="bottom-nav" aria-label="Navegação principal">
         <div class="bottom-nav-inner">
-            <button class="bottom-nav-item active" data-nav="dashboard.html" aria-current="page"><span class="bottom-nav-icon" aria-hidden="true">🏠</span><span>Início</span></button>
+            <button class="bottom-nav-item is-active" data-nav="dashboard.html" aria-current="page"><span class="bottom-nav-icon" aria-hidden="true">🏠</span><span>Início</span></button>
             <button class="bottom-nav-item" data-nav="caravanas.html"><span class="bottom-nav-icon" aria-hidden="true">🚌</span><span>Caravanas</span></button>
             <button class="bottom-nav-item" data-nav="participantes.html"><span class="bottom-nav-icon" aria-hidden="true">👥</span><span>Participantes</span></button>
             <button class="bottom-nav-item" data-nav="pesquisar-participante.html"><span class="bottom-nav-icon" aria-hidden="true">⋯</span><span>Mais</span></button>
@@ -65,8 +69,8 @@
             <h2 id="confirmTitle">Confirmar</h2>
             <p id="confirmDescription"></p>
             <div class="modal-actions">
-                <button class="btn btn-secondary" id="confirmCancel">Cancelar</button>
-                <button class="btn btn-danger" id="confirmOk">Confirmar</button>
+                <button class="btn btn--secondary" id="confirmCancel">Cancelar</button>
+                <button class="btn btn--danger" id="confirmOk">Confirmar</button>
             </div>
         </div>
     </div>

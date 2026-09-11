@@ -12,25 +12,26 @@
 </head>
 <body data-page="login">
     <main id="app" class="login-page">
-        <div class="card login-card">
+        <div class="card login-card form-box">
             <div class="login-logo" aria-hidden="true">🚌</div>
+            <span class="eyebrow">Bem-vindo</span>
             <h1 class="login-title">Caravanas CCB</h1>
             <form id="loginForm" novalidate>
-                <div class="form-field">
-                    <label class="form-label" for="usuario">Usuário</label>
-                    <input class="form-input" id="usuario" name="usuario" type="text" placeholder="Digite seu usuário" autocomplete="username">
+                <div class="form-group">
+                    <label class="label" for="usuario">Usuário</label>
+                    <input class="field" id="usuario" name="usuario" type="text" placeholder="Digite seu usuário" autocomplete="username">
                     <span class="form-error" id="usuarioError"></span>
                 </div>
-                <div class="form-field">
-                    <label class="form-label" for="senha">Senha</label>
+                <div class="form-group">
+                    <label class="label" for="senha">Senha</label>
                     <div class="password-wrap">
-                        <input class="form-input" id="senha" name="senha" type="password" placeholder="Digite sua senha" autocomplete="current-password">
+                        <input class="field" id="senha" name="senha" type="password" placeholder="Digite sua senha" autocomplete="current-password">
                         <button type="button" class="password-toggle" id="toggleSenha" aria-label="Mostrar senha">👁️</button>
                     </div>
                     <span class="form-error" id="senhaError"></span>
                 </div>
-                <button class="btn btn-primary btn-block" type="submit">Entrar</button>
-                <p style="text-align:center; margin-top: 12px;">
+                <button class="btn btn--primary btn--block" type="submit">Entrar</button>
+                <p class="login-link">
                     <a href="#" id="forgotLink">Esqueceu a senha?</a>
                 </p>
             </form>

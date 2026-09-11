@@ -1,24 +1,30 @@
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
-img, svg {
+img {
     max-width: 100%;
+    height: auto;
     display: block;
-}
-
-button, input, select, textarea {
-    font: inherit;
 }
 
 a {
@@ -27,5 +33,14 @@ a {
 }
 
 ul, ol {
-    list-style-position: inside;
+    list-style: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }

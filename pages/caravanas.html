@@ -13,23 +13,23 @@
 <body data-page="caravanas">
     <header class="page-header">
         <div class="page-header-inner">
-            <button class="icon-button" id="backBtn" aria-label="Voltar">←</button>
+            <button class="btn btn--icon" id="backBtn" aria-label="Voltar">←</button>
             <h1 class="page-title">Caravanas</h1>
-            <button class="icon-button" id="addCaravana" aria-label="Adicionar caravana">+</button>
+            <button class="btn btn--icon" id="addCaravana" aria-label="Adicionar caravana">+</button>
         </div>
     </header>
     <main id="app" class="page">
         <div class="search-field">
             <span class="search-icon" aria-hidden="true">🔍</span>
             <label class="sr-only" for="searchCaravanas">Pesquisar caravanas</label>
-            <input class="form-input" id="searchCaravanas" type="search" placeholder="Pesquisar caravanas" autocomplete="off">
+            <input class="field" id="searchCaravanas" type="search" placeholder="Pesquisar caravanas" autocomplete="off">
         </div>
         <div id="caravanaList" class="caravana-list"></div>
     </main>
     <nav class="bottom-nav" aria-label="Navegação principal">
         <div class="bottom-nav-inner">
             <button class="bottom-nav-item" data-nav="dashboard.html"><span class="bottom-nav-icon" aria-hidden="true">🏠</span><span>Início</span></button>
-            <button class="bottom-nav-item active" data-nav="caravanas.html" aria-current="page"><span class="bottom-nav-icon" aria-hidden="true">🚌</span><span>Caravanas</span></button>
+            <button class="bottom-nav-item is-active" data-nav="caravanas.html" aria-current="page"><span class="bottom-nav-icon" aria-hidden="true">🚌</span><span>Caravanas</span></button>
             <button class="bottom-nav-item" data-nav="participantes.html"><span class="bottom-nav-icon" aria-hidden="true">👥</span><span>Participantes</span></button>
             <button class="bottom-nav-item" data-nav="pesquisar-participante.html"><span class="bottom-nav-icon" aria-hidden="true">⋯</span><span>Mais</span></button>
         </div>
@@ -39,8 +39,8 @@
             <h2 id="confirmTitle">Confirmar</h2>
             <p id="confirmDescription"></p>
             <div class="modal-actions">
-                <button class="btn btn-secondary" id="confirmCancel">Cancelar</button>
-                <button class="btn btn-danger" id="confirmOk">Confirmar</button>
+                <button class="btn btn--secondary" id="confirmCancel">Cancelar</button>
+                <button class="btn btn--danger" id="confirmOk">Confirmar</button>
             </div>
         </div>
     </div>

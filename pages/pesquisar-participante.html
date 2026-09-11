@@ -13,26 +13,26 @@
 <body data-page="pesquisar">
     <header class="page-header">
         <div class="page-header-inner">
-            <button class="icon-button" id="backTop" aria-label="Voltar">←</button>
+            <button class="btn btn--icon" id="backTop" aria-label="Voltar">←</button>
             <h1 class="page-title">Pesquisar</h1>
-            <button class="icon-button" data-logout aria-label="Sair">⏻</button>
+            <button class="btn btn--icon" data-logout aria-label="Sair">⏻</button>
         </div>
     </header>
     <main id="app" class="page">
         <div class="search-field">
             <span class="search-icon" aria-hidden="true">🔍</span>
             <label class="sr-only" for="searchInput">Digite nome ou CPF</label>
-            <input class="form-input" id="searchInput" type="search" placeholder="Digite nome ou CPF" autocomplete="off">
+            <input class="field" id="searchInput" type="search" placeholder="Digite nome ou CPF" autocomplete="off">
         </div>
-        <button class="btn btn-primary btn-block no-print" id="searchBtn">Pesquisar</button>
-        <div id="searchResult" class="participante-list" style="margin-top:16px;"></div>
+        <button class="btn btn--primary btn--block no-print" id="searchBtn">Pesquisar</button>
+        <div id="searchResult" class="participante-list stack-gap"></div>
     </main>
     <nav class="bottom-nav" aria-label="Navegação principal">
         <div class="bottom-nav-inner">
             <button class="bottom-nav-item" data-nav="dashboard.html"><span class="bottom-nav-icon" aria-hidden="true">🏠</span><span>Início</span></button>
             <button class="bottom-nav-item" data-nav="caravanas.html"><span class="bottom-nav-icon" aria-hidden="true">🚌</span><span>Caravanas</span></button>
             <button class="bottom-nav-item" data-nav="participantes.html"><span class="bottom-nav-icon" aria-hidden="true">👥</span><span>Participantes</span></button>
-            <button class="bottom-nav-item active" data-nav="pesquisar-participante.html" aria-current="page"><span class="bottom-nav-icon" aria-hidden="true">⋯</span><span>Mais</span></button>
+            <button class="bottom-nav-item is-active" data-nav="pesquisar-participante.html" aria-current="page"><span class="bottom-nav-icon" aria-hidden="true">⋯</span><span>Mais</span></button>
         </div>
     </nav>
     <div class="modal-overlay" id="confirmOverlay" hidden>
@@ -40,8 +40,8 @@
             <h2 id="confirmTitle">Confirmar</h2>
             <p id="confirmDescription"></p>
             <div class="modal-actions">
-                <button class="btn btn-secondary" id="confirmCancel">Cancelar</button>
-                <button class="btn btn-danger" id="confirmOk">Confirmar</button>
+                <button class="btn btn--secondary" id="confirmCancel">Cancelar</button>
+                <button class="btn btn--danger" id="confirmOk">Confirmar</button>
             </div>
         </div>
     </div>

@@ -133,7 +133,7 @@ function renderProximasCaravanas() {
 
 function buildCaravanaCard(c) {
     var article = document.createElement('article');
-    article.className = 'card card-clickable caravana-card';
+    article.className = 'card card--clickable caravana-card';
     article.setAttribute('data-caravana-id', c.id);
     article.setAttribute('tabindex', '0');
     article.setAttribute('role', 'link');
@@ -270,11 +270,11 @@ function initCaravanaDetalhes() {
     var panelPart = document.getElementById('panelParticipantes');
     var panelInfo = document.getElementById('panelInformacoes');
     tabPart.addEventListener('click', function () {
-        tabPart.classList.add('active'); tabInfo.classList.remove('active');
+        tabPart.classList.add('is-active'); tabInfo.classList.remove('is-active');
         panelPart.hidden = false; panelInfo.hidden = true;
     });
     tabInfo.addEventListener('click', function () {
-        tabInfo.classList.add('active'); tabPart.classList.remove('active');
+        tabInfo.classList.add('is-active'); tabPart.classList.remove('is-active');
         panelInfo.hidden = false; panelPart.hidden = true;
     });
     document.getElementById('infoOrigem').textContent = caravana.origem;
@@ -369,8 +369,8 @@ function initParticipantes() {
     }
     document.querySelectorAll('[data-filter]').forEach(function (btn) {
         btn.addEventListener('click', function () {
-            document.querySelectorAll('[data-filter]').forEach(function (b) { b.classList.remove('active'); });
-            btn.classList.add('active');
+            document.querySelectorAll('[data-filter]').forEach(function (b) { b.classList.remove('is-active'); });
+            btn.classList.add('is-active');
             currentPaymentFilter = btn.getAttribute('data-filter');
             renderParticipantes();
         });
@@ -430,12 +430,12 @@ function renderParticipantes() {
         var actions = document.createElement('div');
         actions.className = 'row-actions';
         var editBtn = document.createElement('button');
-        editBtn.className = 'btn-icon';
+        editBtn.className = 'btn btn--icon';
         editBtn.textContent = '✏️';
         editBtn.setAttribute('aria-label', 'Editar ' + p.nome);
         editBtn.addEventListener('click', function () { navigateTo('participante-form.html', { id: p.id }); });
         var delBtn = document.createElement('button');
-        delBtn.className = 'btn-icon btn-icon-danger';
+        delBtn.className = 'btn btn--icon btn--icon-danger';
         delBtn.textContent = '🗑️';
         delBtn.setAttribute('aria-label', 'Excluir ' + p.nome);
         delBtn.addEventListener('click', function () {
@@ -564,7 +564,7 @@ function initAssociar() {
             cpf.textContent = 'CPF: ' + p.cpf;
             info.appendChild(name); info.appendChild(cpf);
             var addBtn = document.createElement('button');
-            addBtn.className = 'btn btn-secondary';
+            addBtn.className = 'btn btn--secondary';
             addBtn.textContent = 'Adicionar';
             addBtn.addEventListener('click', function () {
                 staging.push({ participanteId: p.id, pagamento: 'pendente' });
@@ -601,7 +601,7 @@ function initAssociar() {
             cpf.textContent = 'CPF: ' + p.cpf;
             info.appendChild(name); info.appendChild(cpf);
             var rm = document.createElement('button');
-            rm.className = 'btn-icon btn-icon-danger';
+            rm.className = 'btn btn--icon btn--icon-danger';
             rm.textContent = '✕';
             rm.setAttribute('aria-label', 'Remover ' + p.nome);
             rm.addEventListener('click', function () {
@@ -657,7 +657,7 @@ function renderPesquisa(term) {
     }
     items.slice(0, 30).forEach(function (p) {
         var card = document.createElement('div');
-        card.className = 'card participante-card card-clickable';
+        card.className = 'card participante-card card--clickable';
         card.setAttribute('data-participante-id', p.id);
         var avatar = document.createElement('span');
         avatar.className = 'avatar';

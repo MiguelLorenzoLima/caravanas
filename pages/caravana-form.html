@@ -13,48 +13,50 @@
 <body data-page="caravana-form">
     <header class="page-header">
         <div class="page-header-inner">
-            <button class="icon-button" id="cancelCaravanaTop" aria-label="Voltar">←</button>
+            <button class="btn btn--icon" id="cancelCaravanaTop" aria-label="Voltar">←</button>
             <h1 class="page-title" id="formTitle">Nova Caravana</h1>
-            <span style="width:40px;"></span>
+            <span class="header-spacer"></span>
         </div>
     </header>
     <main id="app" class="page">
-        <form id="caravanaForm" novalidate>
-            <div class="form-field">
-                <label class="form-label" for="origem">Origem</label>
-                <input class="form-input" id="origem" name="origem" type="text" placeholder="Ex.: Joinville" value="Joinville">
+        <form id="caravanaForm" class="form-box" novalidate>
+            <div class="form-group">
+                <label class="label" for="origem">Origem</label>
+                <input class="field" id="origem" name="origem" type="text" placeholder="Ex.: Joinville" value="Joinville">
                 <span class="form-error" id="origemError"></span>
             </div>
-            <div class="form-field">
-                <label class="form-label" for="destino">Destino</label>
-                <input class="form-input" id="destino" name="destino" type="text" placeholder="Ex.: São Paulo">
+            <div class="form-group">
+                <label class="label" for="destino">Destino</label>
+                <input class="field" id="destino" name="destino" type="text" placeholder="Ex.: São Paulo">
                 <span class="form-error" id="destinoError"></span>
             </div>
-            <div class="form-field">
-                <label class="form-label" for="data">Data da viagem</label>
-                <input class="form-input" id="data" name="data" type="date">
-                <span class="form-error" id="dataError"></span>
+            <div class="form-row">
+                <div class="form-group form-group--half">
+                    <label class="label" for="data">Data da viagem</label>
+                    <input class="field" id="data" name="data" type="date">
+                    <span class="form-error" id="dataError"></span>
+                </div>
+                <div class="form-group form-group--half">
+                    <label class="label" for="horario">Horário de saída</label>
+                    <input class="field" id="horario" name="horario" type="time">
+                    <span class="form-error" id="horarioError"></span>
+                </div>
             </div>
-            <div class="form-field">
-                <label class="form-label" for="horario">Horário de saída</label>
-                <input class="form-input" id="horario" name="horario" type="time">
-                <span class="form-error" id="horarioError"></span>
-            </div>
-            <div class="form-field">
-                <label class="form-label" for="responsavel">Responsável</label>
-                <input class="form-input" id="responsavel" name="responsavel" type="text" placeholder="Ex.: Ir. João Silva">
+            <div class="form-group">
+                <label class="label" for="responsavel">Responsável</label>
+                <input class="field" id="responsavel" name="responsavel" type="text" placeholder="Ex.: Ir. João Silva">
                 <span class="form-error" id="responsavelError"></span>
             </div>
             <div class="form-actions">
-                <button class="btn btn-secondary" type="button" id="cancelCaravana">Cancelar</button>
-                <button class="btn btn-primary" type="submit">Salvar</button>
+                <button class="btn btn--secondary" type="button" id="cancelCaravana">Cancelar</button>
+                <button class="btn btn--primary" type="submit">Salvar</button>
             </div>
         </form>
     </main>
     <nav class="bottom-nav" aria-label="Navegação principal">
         <div class="bottom-nav-inner">
             <button class="bottom-nav-item" data-nav="dashboard.html"><span class="bottom-nav-icon" aria-hidden="true">🏠</span><span>Início</span></button>
-            <button class="bottom-nav-item active" data-nav="caravanas.html"><span class="bottom-nav-icon" aria-hidden="true">🚌</span><span>Caravanas</span></button>
+            <button class="bottom-nav-item is-active" data-nav="caravanas.html"><span class="bottom-nav-icon" aria-hidden="true">🚌</span><span>Caravanas</span></button>
             <button class="bottom-nav-item" data-nav="participantes.html"><span class="bottom-nav-icon" aria-hidden="true">👥</span><span>Participantes</span></button>
             <button class="bottom-nav-item" data-nav="pesquisar-participante.html"><span class="bottom-nav-icon" aria-hidden="true">⋯</span><span>Mais</span></button>
         </div>
