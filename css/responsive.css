@@ -1,0 +1,65 @@
+@media (min-width: 768px) {
+    .shortcut-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .caravana-list, .participante-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .caravana-list .caravana-card,
+    .participante-list .participante-card {
+        margin-bottom: 0;
+    }
+
+    .form-actions {
+        max-width: 480px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .caravana-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .participante-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bottom-nav-icon {
+        font-size: 1.1rem;
+    }
+}
+
+@media print {
+    .bottom-nav, .page-header, .no-print, .toast-container, .form-actions, .btn {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    main.page, .container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .card {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
