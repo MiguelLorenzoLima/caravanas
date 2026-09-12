@@ -1,4 +1,4 @@
-# AGENTS.md — Caravanas CCB · Sistema Editorial Portátil
+# AGENTS.md — Caravanas · Sistema Editorial Portátil
 
 > Identidade editorial quente (bege / bronze / madeira), tipografia serifada, CSS puro com tokens.
 > Fonte canônica do visual: este arquivo. Fonte canônica dos valores: `css/variables.css`.
